@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="GBK">
+    <file url="file://$PROJECT_DIR$/hello.text" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/hello.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/learn.iml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/lib/carManagerPro-0.0.1-SNAPSHOT.jar" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lib/carManagerPro-0.0.1-SNAPSHOT.jar.original" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/GUI/Example07.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/InternetProgram/Test/Test5/DBUtils.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/NioDemo/Channels/FileChannels/FileChannelDemo1.java" charset="GBK" />
+    <file url="PROJECT" charset="GBK" />
+  </component>
+</project>

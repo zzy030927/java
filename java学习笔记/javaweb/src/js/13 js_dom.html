@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文档对象模型</title>
+</head>
+<body>
+    <img id="h1" src="dom结构.png"> <br><br>
+    <div class="cls">传智播客</div> <br>
+    <div class="cls">黑马程序员</div> <br>
+    <input type="checkbox" name="hobby"> 电影
+    <input type="checkbox" name="hobby"> 旅游
+    <input type="checkbox" name="hobby"> 游戏
+</body>
+<script>
+    // 1. 获取 Element 元素
+    // 根据 ID 获取
+    let img = document.getElementById("h1");
+    // window.alert(img);
+    // 根据标签获取 - 获取 div 标签
+    let divs = document.getElementsByTagName("div");
+    for (let i = 0; i < divs.length; i++) {
+        // window.alert(divs[i]);
+    }
+    // 根据 name属性值 获取
+    let names = document.getElementsByName("hobby");
+    for (let i = 0; i < names.length; i++) {
+        // window.alert(names[i]);
+    }
+    // 根据 class 属性获取
+    let classes = document.getElementsByClassName("cls");
+    for (let i = 0; i < classes.length; i++) {
+        // window.alert(classes[i]);
+    }
+
+    // 根据已经获取到的元素修改 原来的值，方法看 w3school 参考手册
+    // 这里用 class 获取到的属性举例
+    // 因为这里的 class 属性在 div 标签中，所以要用 div对象的方法
+    let div1 = classes[0];
+    div1.innerHTML = "传智播客666";
+
+    // 案例
+    // 1. 换一张图片
+    img.srcset = "../html/hsv.png";
+    // 2. 在所有的 div 标签的内容后加上 very good
+    for (let i = 0; i < divs.length; i++) {
+        divs[i].innerHTML += "<font color='red'> very good </font>";
+    }
+    // 3. 使所有复选框处于选中状态
+    for (let i = 0; i < names.length; i++) {
+        names[i].checked = true;
+    }
+</script>
+</html>

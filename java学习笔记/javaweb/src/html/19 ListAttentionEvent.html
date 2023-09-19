@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注意事项</title>
+</head>
+<body>
+<!--li标签不要在 列表之外使用，因为不规范，但是可以使用-->
+    <h2>要把大象放冰箱需要几步?</h2>
+    <ol>
+        <li>打开冰箱门</li>
+        <li>把大象放冰箱</li>
+        <li>把冰箱门关上</li>
+        <li>
+            <a href = "http:\\www.baidu.com">百度</a>
+            <!--在列表中放其他标签需要把这个标签包括在 li 标签中-->
+        </li>
+    </ol>
+    <h2>你想去的几个城市?</h2>
+    <ul>
+        <li>成都</li>
+        <li>
+            <span>上海</span>
+            <!--span标签仅用于包裹文字，没有任何作用-->
+            <ul>
+            <!--列表嵌套-->
+                <li>外滩</li>
+                <li>
+                    <span>东方明珠</span>
+                    <ul>
+                        <li>xxxxxx</li>
+                    </ul>
+                </li>
+                <li>迪士尼乐园</li>
+            </ul>
+        </li>
+        <li>西安</li>
+        <li>武汉</li>
+    </ul>
+
+    <h2>如何更好的学习</h2>
+    <dl>
+        <dt>做好笔记</dt>
+        <dd>笔记是复习的重点</dd>
+        <dd>笔记可以是电子版，也可以是纸质版</dd>
+        <!--dd解释可以是多行的-->
+        <dt>多加练习</dt>
+        <dd>只有敲出来的代码，才是自己的</dd>
+        <dt>别怕出错</dt>
+        <dd>错是很正常的</dd>
+</dl>
+</body>
+</html>

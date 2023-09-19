@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.carProgram.mapper.VideoMapper">
+    <insert id="insert">
+        INSERT INTO training_videos(id, title, description, video_url, created_at, update_at)
+        VALUES (#{id}, #{title}, #{description}, #{videoUrl}, #{createdAt}, #{updateAt})
+    </insert>
+    <update id="update">
+        UPDATE training_videos
+        <set>
+            <if test="title != null and title != ''">
+                title = #{title},
+            </if>
+            <if test="description != null and description != ''">
+                description = #{description},
+            </if>
+            <if test="videoUrl != null and videoUrl != ''">
+                video_url = #{videoUrl},
+            </if>
+            <if test="updateAt != null">
+                update_at = #{updateAt}
+            </if>
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+</mapper>

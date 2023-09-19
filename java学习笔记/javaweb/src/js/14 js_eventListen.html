@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件监听</title>
+</head>
+<body>
+    <input type="button" onclick="on()" value="按钮1">
+    <input type="button" id="btn" value="按钮2">
+    <script>
+        function on(){
+            alert(document.getElementsByTagName("input")[0].value + "被绑定");
+        }
+        document.getElementById("btn").onclick = function() {
+            alert(document.getElementById("btn").value + "被绑定");
+        }
+    </script>
+</body>
+</html>

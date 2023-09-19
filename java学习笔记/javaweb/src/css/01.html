@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">     /* 用 style标签包裹的叫内部样式表 */
+      /*
+        type = "text/css" 表示标签内容用 css 修饰
+        CSS最基本的分类：标签样式表、类样式表、id样式表
+        CSS从位置上的分类：嵌入式样式表、内部样式表、外部样式表
+      */
+      /* 标签样式表 */
+      p{
+          color : red;
+          font-size : 30px;
+      }
+     /* 类样式 */
+      .f20{
+          font-size : 50px;
+      }
+      /* id 样式 */
+      #p4{
+        background-color : aqua;
+        font-size : 70px;
+        font-weight : bolder;
+        font-style : italic;
+        font-family:"华文彩云";
+      }
+    /*  组合样式 */
+      div p{
+      /*   表示 div标签内部的 p 标签 */
+        color : blueviolet;
+        font-size: 10px;
+      }
+      div .f32{
+          /*表示 div 内部的 f32类标签 */
+          color : blue;
+          font-size : 20px;
+      }
+    </style>                                    <!-- 外部标签是把 CSS 修饰的代码包装成一个 CSS文件，引入时用 link标签引入 -->
+    <link rel = "stylesheet" href = "01.css">   <!--外部标签 固定格式 rel = "stylesheet" href = "CSS文件地址"-->
+</head>
+<body>
+  <p>这是一个段落1</p>
+  <p class = "f20">这也是一个段落2</p>
+  <p class = "f20" id = "p4">这也是一个段落3</p>
+  <div>
+      <p>这是一个段落4</p>
+      <p class = "f32" style = "font-weight:bolder;color:yellow;">这是一个段落5</p>     <!--style标签在一个标签内部叫嵌入式样式表-->
+      <span class = "f32">这是一个段落6</span>
+      <p class = "f33">这是一个段落7</p>
+  </div>
+</body>
+</html>

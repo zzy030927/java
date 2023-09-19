@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>field与legend标签</title>
+</head>
+<body>
+    <form action = "https://search.jd.com/search">
+        <fieldset>
+            <legend>主要信息</legend>
+            账户：<input type="text" name = "account" value = "2453279134" maxlength="10"><br>
+            密码：<input type="password" name = "pwb" ><br>
+            性别：
+            <input type = "radio" name = "sex" value = "male">男
+            <input type = "radio" name = "sex" value = "female" checked>女
+        </fieldset>
+<!--        fieldset 标签：可对控件进行一个分组-->
+<!--        legend 标签 可以在 fieldset 的框子名字， 其他的设置在表单控件设置在框子内-->
+        <br>
+        爱好：
+        <input type = "checkbox" name = "hobby" value = "smoke">抽烟
+        <input type = "checkbox" name = "hobby" value = "喝酒" checked>喝酒
+        <input type = "checkbox" name = "hobby" value = "烫头" checked>烫头
+        <br>
+        <input type = "hidden" name = "tag" value = "12334554">
+        <br>
+        <input type = "submit" value = "确认">
+        <button type = "reset">重置</button>
+        <button type = "button">检测账户是否被注册</button>
+    </form>
+</body>
+</html>

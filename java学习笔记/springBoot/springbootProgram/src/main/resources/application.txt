@@ -1,0 +1,26 @@
+#原来是 application.properties 配置文件
+
+#驱动类名称
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+#数据库连接的url
+spring.datasource.url=jdbc:mysql://localhost:3306/mybatis
+#连接数据库的用户名
+spring.datasource.username=root
+#连接数据库的密码
+spring.datasource.password=zzy0927
+
+#配置mybatis的日志, 指定输出到控制台
+mybatis.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
+#开启mybatis的驼峰命名自动映射开关 a_column ------> aCloumn
+mybatis.configuration.map-underscore-to-camel-case=true
+
+#配置单个文件最大上传文件大小
+spring.servlet.multipart.max-file-size=10MB
+#配置单个请求最大上传文件大小（一个请求可以上传多个文件）
+spring.servlet.multipart.max-request-size=100MB
+
+#阿里云OOS配置文件
+aliyun.oss.endpoint=https://oss-cn-beijing.aliyuncs.com
+aliyun.oss.accessKeyId=LTAI5tHFv35jtEoZSCfeK3hy
+aliyun.oss.accessKeySecret=d2W1spBIhajkIboyL2qrGHMdcRgZKf
+aliyun.oss.bucketName=springboot-learn

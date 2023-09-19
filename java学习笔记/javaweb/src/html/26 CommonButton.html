@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>普通按钮</title>
+</head>
+<body>
+    <form action = "https://search.jd.com/search">
+        账户：<input type="text" name = "account" value = "2453279134" maxlength="10"><br>
+        密码：<input type="password" name = "pwb" ><br>
+        性别：
+        <input type = "radio" name = "sex" value = "male">男
+        <input type = "radio" name = "sex" value = "female" checked>女
+        <br>
+        爱好：
+        <input type = "checkbox" name = "hobby" value = "smoke">抽烟
+        <input type = "checkbox" name = "hobby" value = "喝酒" checked>喝酒
+        <input type = "checkbox" name = "hobby" value = "烫头" checked>烫头
+        <br>
+        <input type = "hidden" name = "tag" value = "12334554">
+        <br>
+        <input type = "submit" value = "确认">
+        <button type = "reset">重置</button>
+<!--        <button>检测账户是否被注册</button>  -->
+<!--        如果 button 标签中什么都不写，那么就会有一个默认标签 type 并且值为 submit,-->
+        <button type = "button">检测账户是否被注册</button>
+<!--        当 type 属性的值为 button，那么他就是一个普通标签-->
+    </form>
+</body>
+</html>

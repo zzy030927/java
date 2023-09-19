@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格常用属性</title>
+</head>
+<body>
+<table border="1" width = 500 height = 300 cellspacing="0">
+<!--   height 属性 只改变主体的高度，其他的高度不变, 并且例子中 height = 300 表示 整个表格的总高度至少是 300-->
+<!--    cellspacing 属性 cell：单元格 spacing：间隔  cellspacing:单元格间隔-->
+    <caption>学生信息</caption>
+
+<!--    head-->
+    <thead height = 100 align = "left" valign="top">
+    <!--   thead标签中 border\width\cellspacing属性都没用，只有 height属性有用 -->
+    <!--   align属性 align：对其，有三个值: left,right,center。左右中-->
+    <!--   valign属性 vertical align 垂直对其方式：top,middle,bottom。上中下-->
+    <tr>
+        <th width = 50 height = 300>姓名</th>
+        <!--   高度要么不变，要么 thead里的每个单元格一起变-->
+        <th align = "center" valign="middle">性别</th>
+        <th>年龄</th>
+        <th>民族</th>
+        <th>政治面貌</th>
+    </tr>
+    </thead>
+
+<!--    body-->
+    <tbody height = 200 align = "right" valign="bottom">
+    <!--    如果这里 height = 100的话，表格高度不会变，因为 thead的高度为 100，tbody的高度为 100，tfoot的高度 <100,
+            加一起不够 table的总高度 300，所以不够的会补给 tbody-->
+    <tr height = 50 align = "left" valign="middle">
+        <!--可以对单独的行进行设置-->
+        <td>张三</td>
+        <td>男</td>
+        <td>18</td>
+        <td>汉族</td>
+        <td>团员</td>
+    </tr>
+    <tr>
+        <td>李四</td>
+        <td>女</td>
+        <td>20</td>
+        <td>满族</td>
+        <td>群众</td>
+    </tr>
+    <tr>
+        <td>王五</td>
+        <td>男</td>
+        <td>19</td>
+        <td>回族</td>
+        <td>党员</td>
+    </tr>
+    <tr>
+        <td>赵六</td>
+        <td>女</td>
+        <td>21</td>
+        <td>壮族</td>
+        <td>团员</td>
+    </tr>
+    </tbody>
+
+<!--    foot-->
+    <tfoot height = 50 align = "left" valign="bottom">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>共计: 4人</td>
+    </tr>
+
+    </tfoot>
+    </table>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量</title>
+</head>
+<body>
+  <script>
+    var a = 20; // 在 js 中 var 可以存放不同类型的值
+                // var 变量的作用域属于全局变量
+    document.writeln(a);
+    a = "张三";
+    document.write(a);
+    {
+      var b = 3;  // 代码块中定义
+      var b = 4;  // 并且 var 变量可以被重复定义，覆盖掉上面的值
+      let c = 5;  // let 关键字定义的变量只在该代码块内有效，并且该变量的值不能被重复定义
+        // let c = 6;
+      c = 6;
+    }
+    // document.write(c) 尝试打印 let 定义的变量 c
+    const c = 5;        // const 关键字定义的变量不可被改变。
+    // c = 6;
+    document.write(b);  // 代码块外也可以使用
+  </script>
+</body>
+</html>

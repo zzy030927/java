@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+</head>
+<body>
+<!--表格各种标签-->
+<!--    表格标题: caption
+        表格头部: thead   table head的意思
+        表格主体: tbody
+        表格脚注: tfoot
+-->
+  <table border="3" cellspacing="0" align="center">
+    <!-- table标签 表示一个表格-->
+    <!-- border属性 表示有一个 3 像素宽的边框-->
+<!--    表格标题-->
+    <caption>学生信息</caption>
+<!--    表格头部-->
+    <thead align="center">
+      <tr> <!--行-->
+        <th width="40">姓名</th>
+        <th width="40">性别</th>
+        <th width="40">年龄</th>
+        <th width="40">民族</th>
+        <th width="70">政治面貌</th> <!--行内单元格-->
+        <!--tr标签 table row 表示行-->
+        <!--th标签 表示 table head里面的东西，是一个一个的单元格-->
+      </tr>
+    </thead>
+<!--    表格主体-->
+    <tbody align="center">
+    <!--td 标签： 表格内的数据，是 table body 内的一个一个单元格，注意：区别于 th，td为 tbody内的单元格-->
+      <tr>  <!--第一行-->
+        <td>张三</td>
+        <td>男</td>
+        <td>18</td>
+        <td>汉族</td>
+        <td>团员</td>
+      </tr>
+      <tr>  <!--第二行-->
+        <td>李四</td>
+        <td rowspan="2">男</td>
+        <td>20</td>
+        <td>满族</td>
+        <td>群众</td>
+      </tr>
+    <tr>  <!--第三行-->
+      <td>王五</td>
+      <td>19</td>
+      <td>回族</td>
+      <td>党员</td>
+    </tr>
+    <tr>  <!--第四行-->
+      <td>赵六</td>
+      <td>女</td>
+      <td>21</td>
+      <td>壮族</td>
+      <td>团员</td>
+    </tr>
+    </tbody>
+<!--    表格脚注-->
+    <tfoot align="center">
+    <!--脚注中的单元格和 tbody中单元格表示一样，都为 td-->
+      <tr>
+        <td colspan="4"></td> <!--colspan为横跨几列-->
+        <td>共计: 4人</td>
+      </tr>
+
+    </tfoot>
+  </table>
+</body>
+</html>

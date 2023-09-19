@@ -1,0 +1,6 @@
+Future接口方法解析：
+get()：等待任务完成，获取执行结果，如果任务取消会抛出异常；
+get(long timeout, TimeUnit unit)：指定等待任务完成的时间，等待超时会抛出异常；
+isDone()：判断任务是否完成；
+isCancelled()：判断任务是否被取消；
+cancel(boolean mayInterruptIfRunning)：尝试取消此任务的执行，如果任务已经完成、已经取消或由于其他原因无法取消，则此尝试将失败；

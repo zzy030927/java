@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件例子2</title>
+</head>
+<body>
+    <img src ="./dom结构.png" id = "oldImg"> <br>
+    <input type="button" onclick="change()" value="改变">
+    <input type="button" onclick="reset()" value="重置">
+    <br>
+    <input type="text" id="text" onblur="lose()" onfocus="on()" value="ITCAST">
+    <br>
+    <input type="checkbox" name="event" value="电影">电影
+    <input type="checkbox" name="event" value="旅游">旅游
+    <input type="checkbox" name="event" value="游戏" checked>游戏
+    <br>
+    <input type="button" onclick="allSelect()" value="全选">
+    <input type="button" onclick="resSelect()" value="反转">
+</body>
+<script>
+  function change() {
+    document.getElementById("oldImg").src = "./event.png";
+  }
+  function reset() {
+    document.getElementById("oldImg").src = "./dom结构.png";
+  }
+  function on() {
+    document.getElementById("text").value = document.getElementById("text").value.toLowerCase();
+  }
+  function lose() {
+    document.getElementById("text").value = document.getElementById("text").value.toUpperCase();
+  }
+  function allSelect() {
+    let checkBoxes = document.getElementsByName("event");
+    for (let i = 0; i < checkBoxes.length; i++) {
+      const checkBox = checkBoxes[i];
+      checkBox.checked = true;
+    }
+  }
+  function resSelect() {
+    let checkBoxes = document.getElementsByName("event");
+    for (let i = 0; i < checkBoxes.length; i++) {
+      checkBoxes[i].checked = !checkBoxes[i].checked;
+    }
+  }
+</script>
+</html>

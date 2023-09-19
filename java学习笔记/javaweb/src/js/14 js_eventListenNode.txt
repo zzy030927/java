@@ -1,0 +1,17 @@
+通过 HTML 标签中的事件属性进行绑定
+      通过事件属性 onclick 进行绑定
+          例子：
+          <input type="button" onclick="on()" value="按钮1">      // 点击 此按钮后，触发 onclick 属性绑定的方法
+          <script>
+            function on() {
+                alert("按钮被绑定");
+            }
+          </script>
+      通过DOM元素属性绑定
+           例子：
+           <input type="button" id="btn" value="按钮1">
+           <script>
+            document.getElementById("btn").onclick = function() {
+                alert("按钮被绑定");
+            }
+           </script>

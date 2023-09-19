@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用指令2_v-on</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+</head>
+<body>
+<!--    v-on:用来绑定事件 -->
+    <div id="app">
+      <input type="button" value="按钮1" v-on:click="handle()">   <!-- v-on:click还可以写成 @click -->
+<!--                                                                  同样还有 v-on:blur,v-on:focus等-->
+    </div>
+</body>
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+
+    },
+    methods: {
+      handle: function () {
+        window.alert("被点击");
+      }
+    }
+  })
+</script>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+</head>
+<body>
+<!-- JSON：javaScript对象标记法。 JSON 是通过 JavaScript对象标记法书写的文本 -->
+<!-- 由于语法简单，层次结构鲜明，现多用于作为数据载体，在网络中进行数据传输, 比如：前端传输数据给 java 程序，或者 java程序 返回较为复杂的数据也可用 json格式-->
+
+<!-- JSON 基础语法-->
+    <script>
+        var information = '{"age": 18, "haveGirlfriend": true, "addr":["上海","北京","天津"]}';
+        // 把一个字符串转换为一个 json 格式的对象
+        var jsonObject = JSON.parse(information);
+        window.alert(jsonObject.age);
+        // 把一个 json 格式的对象转换为一个 String 类型的字符串
+        var jsonStr = JSON.stringify(jsonObject);
+        window.alert(jsonStr);
+    </script>
+</body>
+</html>

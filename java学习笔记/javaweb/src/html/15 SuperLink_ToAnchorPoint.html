@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超链接跳转锚点</title>
+</head>
+<body>
+<!--href 跳转到锚点 111， #为锚点的标志-->
+<a href="#111">跳转hsv图</a>
+<a href="#a222">跳转原图</a>
+<a href="#333">跳转gray图</a>
+<a href="14%20SuperLink_ToFile.html#页面14">14页面的锚点</a>
+<!--跳转到其他页面的锚点-->
+
+<!--name 属性设置锚点，锚点名字为 111-->
+<a name = "111"></a>
+<p>hsv风景</p>
+<img src = "./hsv.png" alt="">
+
+<p id = "a222">原图</p>
+<img src = "./img_address/1.webp" alt="">
+<!--p标签中的 id属性也可以设置锚点，使超链接跳转到该地方, id属性的值最好别是 数字开头-->
+<!--id属性 全称 idcard 身份证号的意思-->
+
+<a name = "333"></a>
+<p>gray风景</p>
+<img src = "./img_address/son_address/gray.png">
+
+<p></p>
+<a href = "#">回到顶部</a>
+<!--返回页面开始-->
+
+<p></p>
+<a href = "">刷新页面</a>
+<!--href的值为空，刷新页面。-->
+
+<p></p>
+<a href = "javascript:alert(666);">弹窗</a>
+<!--javascript 会学到，此作用是弹窗-->
+
+</body>
+</html>

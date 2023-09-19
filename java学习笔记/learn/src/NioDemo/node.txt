@@ -1,0 +1,20 @@
+阻塞IO：
+    生成一个线程池，当一个线程到来，那么就分配，等到线程池内线程分配完毕后，那么就会拒绝新的线程的访问
+    ，会把这个线程放入阻塞队列中，直到线程池内有线程被归还后才会分配。
+    如果在进行同步I/O时，如果读取数据，代码会阻塞直到有可供读取的数据，同样，写入操作会阻塞到直到数据
+    能够写入。（同步I/O：程序在进行完I/O操作后才能继续执行，否则就会阻塞）
+非阻塞I/O（NIO）：
+    当有读、写、嵌套字连接等任何注册事件操作发生时，可以从Selector中获取SelectorKey,同时从SelectorKey
+    中找到发生的事件和具体的SelectableChannel,以获取客户端发来的数据。（Selector有一个监听器的作用）
+    非阻塞I/O本身并不阻塞，而是延迟I/O的操作，打开I/O但是没有发生I/O操作时不会阻塞，通过select()监听
+    多个通道，当真正发生I/O操作的时候才进行阻塞，通过selectKey()获取事件。
+
+NIO的三个核心部分：通道（channels）、缓冲区（buffers）、监听器（selectors）
+                NIO中的通道相当于阻塞I/O中的流，但是阻塞I/O中的流是单向的，而通道是双向的
+                NIO中的流主要包括：FileChannel, DatagramChannel, SocketChannel, ServerSocketChannel
+                        分别对应：文件I/O,      UDP            , TCP（发送端）,   TCP（接收端）
+
+                Buffer主要包括：ByteBuffer, CharBuffer, DoubleBuffer, FloatBuffer, IntBuffer, LongBuffer, ShortBuffer
+                Selector：运行单线程处理多个通道，比如你可以同时读、写等。
+
+NIO输入输出数据：输入输出数据先到缓冲区，然后通道进行读写（可以异步进行）。

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数据类型、运算符、流程控制</title>
+</head>
+<body>
+</body>
+  <script>
+    // 在 js 中数据类型分为 原始类型 和 引用类型，和 java 相似
+    /*
+      原始类型：
+        number : 数字
+        string : 字符串，单双引号皆可
+        boolean : 布尔
+        null : 对象为空
+        undefined : 声明的变量未初始化
+     */
+    typeof 查看数据类型
+    window.alert(typeof 3);     // number 类型
+    window.alert(typeof "A");   // String 类型
+    window.alert(typeof 'hello'); // String 类型
+    window.alert(typeof true);  // Boolean 类型
+    window.alert(typeof null);  // Object 类型
+    var a;
+    window.alert(typeof a);   // undefined 类型
+    let b = 3;
+    window.alert(typeof b); // number 类型
+    // 运算符与 java 相同，唯一有一个 js 中 特殊的运算符 === 区别于 ==
+    // == 在进行两个值比较时 会进行类型转换
+    // === 在进行比较时不会进行类型转换
+    alert("97" == 97);   // 会进行类型转换
+    alert("97" === 97);  // 不会进行类型转换
+  </script>
+</html>
