@@ -1,5 +1,0 @@
-新的socket通道类是可以运行非阻塞模式并且是可选择的，再也没有为每个socket连接一个线程的必要，也避免了大量管理线程所需要的上下文开销，
-借助新的NIO类，一个或几个线程就可以管理成百上千个活动socket连接。
-DatagramChannel和SocketChannel都具有读和写的功能
-而ServerSocketChannel是负责监听传入的连接和建立新的SocketChannel对象，它本身不进行数据传输。
-如果有一个Socket对象已经存在，那么不能用它来创建DatagramChannel\SocketChannel\ServerSocketChannel类的对象
