@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-for</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+</head>
+<body>
+<!--v-for遍历作用-->
+  <div id="app">
+      <span v-for="addr in addrs">{{addr}} </span>    <!--第一种遍历方式-->
+      <p></p>
+      <span v-for="(addr, index) in addrs">{{index+1}}:{{addr}} </span>   <!--(value, index) 第一个为数组中的值，第二个为索引-->
+  </div>
+</body>
+<script>
+  new Vue({
+    el: "#app",
+    data: {
+      addrs: ["北京","天津","上海","河北"]
+    },
+    methods: {
+
+    }
+  })
+</script>
+</html>

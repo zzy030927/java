@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js对象中的Array</title>
+</head>
+<body>
+    <script>
+      // 数组特点： 长度可变，类型可变，类似于 java 中 StringBuilder
+      let array1 = new Array(1, 2, 3, 4); // 定义数组方式 1
+      let array2 = [1, 2, 3, 4];          // 定义数组方式 2
+      // 访问
+      document.write("array[0] = " + array1[0] + " ");
+      array1[4] = "12";
+      document.write("往array1数组中添加元素: " + array1[4]);
+    </script>
+    <p></p>
+    <script>
+      // 数组遍历
+      // forEach() 方法，遍历数据中有值的元素
+      // push() 方法，在数组尾部添加元素    push(3,4,5,....);
+      // splice() 方法，删除数组中元素     splice(2, 2);  // 从索引为 2 的位置开始删除元素，删除两个元素
+      document.write("数组for循环遍历: ");
+      array2[10] = 10;
+      for (let i = 0; i < array2.length; i++) {
+          document.writeln(array2[i]);
+      }
+      document.write("数组forEach循环遍历: ");
+      array2.forEach(function(e) { // 每遍历一次，调用一次 function()函数,括号内为几个参数
+        document.writeln(e);
+      })
+    </script>
+    <p></p>
+    <script>
+      // forEach 循环 简写：类似于 lambda 表达式
+      document.write("数组forEach循环遍历简写: ");
+      array2.forEach((e) => {
+          document.writeln(e);
+      })
+    </script>
+</body>
+</html>

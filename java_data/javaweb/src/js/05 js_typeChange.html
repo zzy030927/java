@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>类型转换</title>
+</head>
+<body>
+  <script>
+    // 类型转换
+    var str1 = "97";
+    var str2 = "  12abc"; // parseInt() 转换后为 12
+    var str3 = "abc";   // 字面不是 number类型，那么 parseInt()转换后为 NaN
+    str1 = parseInt(str1);
+    str2 = parseInt(str2);
+    str3 = parseInt(str3);
+    document.write("现在str1类型为" + typeof str1 + "值为: " + str1);
+    document.write("现在str2类型为" + typeof str2 + "值为: " + str2);
+    document.write("现在str3类型为" + typeof str3 + "值为: " + str3 + " \\\\\\ ");
+    // 0,NaN,null,undefined,"" 会转换为 false, 其他全部会转换为 true
+    if (0 || NaN || null || "" || undefined) {
+      document.write("？");
+    } else if ("123" && 123) {
+      document.write("转换为了true")
+    }
+  </script>
+</body>
+</html>

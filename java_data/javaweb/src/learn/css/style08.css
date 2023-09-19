@@ -1,0 +1,23 @@
+.div1 .p2{
+    color: red;
+}
+
+.span {
+    color: #ff00cc;
+}
+
+.p2 .span {
+    color: cyan;
+}
+
+.p1 {
+    color: blue;
+}
+
+.p2 {
+    color: darkorange;
+}
+
+.p3 {
+    color: blueviolet;
+}

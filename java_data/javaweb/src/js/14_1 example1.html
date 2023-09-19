@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常见事件举例_看event图</title>
+</head>
+<body onload="load()">
+    <form action="https://www.baidu.com/s" target="_blank" style="text-align: center;" onsubmit="sub()">
+        <input type="text" name="wd" onblur="bfn()" onfocus="ffn()" onkeydown="kfn()">
+
+        <input id="b1" type="submit" value="提交">
+
+        <input id="b2" type="button" value="单击事件" onclick="fn1()">
+    </form>
+    <br><br><br>
+
+    <table width="800px" border="1" cellspacing="0" align="center" onmouseover="over()" onmouseout="out()">
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>分数</th>
+            <th>评语</th>
+        </tr>
+        <tr align="center">
+            <td>001</td>
+            <td>张三</td>
+            <td>90</td>
+            <td>很优秀</td>
+        </tr>
+        <tr align="center">
+            <td>002</td>
+            <td>李四</td>
+            <td>92</td>
+            <td>优秀</td>
+        </tr>
+    </table>
+</body>
+<script>
+    // onload: 页面/元素加载完后触发
+    function load(){
+        console.log("页面加载完成");
+    }
+    // onclick: 鼠标单击事件
+    function fn1() {
+        console.log("我被点击了");
+    }
+    // onblur: 失去焦点事件
+    function bfn() {
+        console.log("失去焦点");
+    }
+    // onfocus: 获取焦点事件
+    function ffn() {
+        console.log("获取焦点");
+    }
+    // onmouseover: 鼠标移动到某元素上事件
+    function over() {
+        console.log("鼠标移入");
+    }
+    // onmouseout: 鼠标从某元素上移开事件
+    function out() {
+        console.log("鼠标移开");
+    }
+    // onkeydown: 键盘被按下事件
+    function kfn() {
+        console.log("键盘被按下");
+    }
+    // onsubmit: 表格提交事件
+    function sub() {
+        console.log("表单被提交");
+    }
+</script>
+</html>

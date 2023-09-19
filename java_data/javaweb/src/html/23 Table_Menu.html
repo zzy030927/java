@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+    <form action = "https://www.baidu.com/s">
+    <!--action属性 将表单的内容用 百度 跳转到 搜索的内容 /s 的意思是 /search :搜索, 这是 百度后端工程师规定的-->
+    <!--form标签：意思是 表单，注意区分 from-->
+      <input type = "text" name = "wd">
+    <!--name属性的值 wd 是固定的，由百度后端工程师规定的，如果你写其他的值，他不会直接去用百度搜索你输入的东西 -->
+      <input type = "submit" value = "去百度搜索">
+    <!--button标签： 设置一个按钮  -->
+    </form>
+    <hr>
+    <form action = "https://serch.jd.com/search" target = "_blank">
+<!--      同样的 由创建的页面用京东搜索东西要按照京东规定的格式来 -->
+      <input type = "text" name = "keyword">
+<!--      京东规定的 name 名字叫 keyword -->
+        <input type = "submit" value = "去京东搜索">
+    </form>
+</body>
+</html>

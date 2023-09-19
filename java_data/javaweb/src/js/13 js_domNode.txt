@@ -1,0 +1,24 @@
+DOM 作用：将标记语言的各个组成部分封装为对应的对象
+      Document : 文档对象，  解析一个 html 文件，将这个文件封装为 document 对象
+      Element : 元素对象，   将这个文件中的每一个标签封装为 element 对象
+      Attribute : 属性对象， 将标签中属性的值封装为 attribute 对象
+      Text : 文本对象， 将文件中定义的文本封装为 text对象，比如在 p标签中的内容为文本
+      Comment : 注释对象，将文件中的注释封装为 comment对象
+
+      JS可以通过 DOM 对 HTML做出一下操作：
+      改变 HTML 元素内容
+      改变 HTML 元素样式
+      对 HTML DOM事件作出反应
+      添加和删除 HTML 元素
+
+DOM 是 W3C的标准，定义了访问 HTML 和 XML文档的标准，分为3个不同的部分：
+    1. Core DOM - 所有文档类型的标准模型
+           Document : 文档对象，  解析一个 html 文件，将这个文件封装为 document 对象
+           Element : 元素对象，   将这个文件中的每一个标签封装为 element 对象
+           Attribute : 属性对象， 将标签中属性的值封装为 attribute 对象
+           Text : 文本对象， 将文件中定义的文本封装为 text对象，比如在 p标签中的内容为文本
+           Comment : 注释对象，将文件中的注释封装为 comment对象
+    2. XML DOM - XML文件的标准模型，这是Core DOM模型的子模型
+    3. HTML DOM - HTML 文档的标准模型，这是Core DOM模型的扩充，把每一个HTML标签封装成一个单独的DOM对象
+       比如： <img> 这个标签封装了 image 对象， <input type='button'>这个标签封装了 button 对象
+
