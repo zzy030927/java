@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>行内、块级、行内块元素转换</title>
+    <style>
+      .p1 {
+        background-color: yellow;
+        border: 2px solid blue;
+        display: inline;    /* 将元素设置为行内元素 */
+      }
+      .p2 {
+        background-color: green;
+        border: 2px solid red;
+        display: inline;
+      }
+      .p3 {
+        background-color: aqua;
+        border: 2px solid yellow;
+      }
+      .a1 {
+        display: block;   /* 将a1类设置为块级元素 */
+      }
+      .div1 {
+          width: 300px;
+          height: 200px;
+          background-color: burlywood;
+          display: none;    /* 隐藏div1类 */
+      }
+    </style>
+</head>
+<body>
+    <!--p标签原本为块级元素-->
+    <p class="p1">
+      12
+    </p>
+    <p class="p2">
+      34
+    </p>
+    <p class="p3">
+      AB
+    </p>
+    <!--a标签原本为行内元素-->
+    <a href="#" class="a1">主页</a>
+    <a href="#">计算机学院</a>
+    <a href="#">经管学院</a>
+    <div class="div1"></div>
+</body>
+</html>

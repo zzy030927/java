@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>链接样式化</title>
+    <style>
+      a {
+        outline: none;
+        text-decoration: none;
+        padding: 2px 1px 0;
+      }
+      a:link {
+        color: #ff00cc;   /*链接颜色*/
+      }
+      a:visited {
+        color: yellow;    /*点击完的颜色*/
+      }
+      a:focus {
+        color: red;
+        background-color: aqua;
+      }
+      a:hover {         /*鼠标移过去的颜色*/
+        color: burlywood;
+        background-color: green;
+      }
+      a:active {       /* 鼠标点击时的效果 */
+        background: coral;
+        color: aquamarine;
+      }
+    </style>
+</head>
+<body>
+    <a href="http://">主页</a>
+    <a href="http://">计算机</a>
+    <a href="http://">土木</a>
+    <a href="http://">经管</a>
+</body>
+</html>
