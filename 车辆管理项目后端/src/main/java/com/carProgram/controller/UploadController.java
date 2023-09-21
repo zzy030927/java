@@ -42,5 +42,7 @@ public class UploadController {
         String url = aliOSSUtils.upload(file);     // 返回文件的url路径
         return Result.success(url);
     }
+
+
 }
 
