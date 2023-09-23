@@ -317,3 +317,84 @@ public class SsmApplication {
     }
 }
 ```
+<a name="TgdFH"></a>
+#### 自动装配
+:::info
+注解@Autowired自动匹配IoC容器中的对象，利用了暴力反射
+:::
+```java
+@Configuration          // 相当于一个配置文件
+@ComponentScan("ssm")   // 扫描哪个包的组件
+@PropertySource("classpath:jdbc.properties")	// 加载配置文件，classpath: 加不加都可以
+public class SpringConfig {		// 配置类
+
+}
+
+@Repository				// 数据层注解，内部封装了@Component
+public class BookDaoImpl implements BookDao {
+    public void save() {
+        System.out.println("book dao save ... ");
+    }
+}
+
+@Repository("BookDao2")	// 可以直接bean对象指定名称
+public class BookDaoImpl2 implements BookDao {
+    public void save() {
+        System.out.println("book dao save ... ");
+    }
+}
+
+@Service
+public class BookServiceImpl implements BookService {
+
+    @Autowired					// 暴力反射，从IoC容器中寻找BookDao的实现类
+    @Qualifier("BookDao2")		// 当容器中有多个 实现类对象时，指定名实现类名称
+    private BookDao bookDao; 
+
+    @Value("${name}")			// 自动装配基本数据类型对象，从 配置文件中加载数据
+    private String name;
+
+    public void save() {
+        System.out.println("book service save ..." + name);
+        bookDao.save();
+    }
+}
+```
+<a name="IipAs"></a>
+#### 管理第三方bean
+```java
+public class JdbcConfig {
+    @Bean
+    public DataSource dataSource() {		// 在一个方法上加上@Bean注解管理第三方bean
+        DruidDataSource ds = new DruidDataSource();
+        ds.setDriverClassName("com.mysql.cj.jdbc.Driver");
+        ds.setUrl("jdbc://mysql:localhost:3306/mybatis");
+        ds.setUsername("root");
+        ds.setPassword("zzy0927");
+        return ds;
+    }
+}
+
+@Configuration          
+@ComponentScan("ssm")   
+@PropertySource("classpath:jdbc.properties")
+@Import(JdbcConfig.class)	// 在配置类中导入刚才管理的bean
+public class SpringConfig {
+
+}
+
+@SpringBootApplication
+public class SsmApplication {		// 简单使用
+    public static void main(String[] args) {
+        // 加载配置类
+        ApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+        JdbcConfig jdbcConfig = context.getBean(JdbcConfig.class);
+        System.out.println(jdbcConfig);
+    }
+}
+```
+<a name="ZFdIm"></a>
+## Spring整合Mybatis
+:::info
+思路分析：
+:::
