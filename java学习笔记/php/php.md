@@ -1,5 +1,5 @@
 <a name="O1Zbr"></a>
-## 第一章 php基础知识
+##  第一章 php基础知识
 <a name="XJszW"></a>
 ### 1.1 创建php代码段
 :::info
@@ -169,13 +169,15 @@ abd;
 ```
 ```php
 <?php
+  $arr = array(1, 2, 3);	// array() 函数，可用于定于数组
   $addr = ['Tom', 2];
   echo $addr[0], "学号: ", $addr[1], '<br>';
   $stu = [1=>'Jerry', 3=>'Jim', 'Tom'];			// 更改Jerry索引为1，Jim索引为3，那么Tom索引自增为4
   echo $stu[1], "好朋友: ", $stu[3], " 天敌: ", $stu[4] ,'<br>';
 	print_r($stu);	// 打印整个数组,使用echo输出数组只会输出Array
-	$stu1 = [1=>'Jerry', 3=>'Jim', 3=>'Tom'];		// 多个索引相同，只保留最后一个索引
+	$stu1 = [1=>'Jerry', 3=>'Jim', 3=>"Kim", "name"=>'Tom'];		// 多个索引相同，只保留最后一个索引,也可以用字符串作为索引
 	print_r($stu);	// Array ( [1] => Jerry [3] => Tom ) 保留了Tom
+	echo $stu1[0];	// 打印 第0个元素
 ```
 ```php
 <?php
@@ -191,7 +193,22 @@ abd;
     unset($array_name1);
     // 删除数组中某个元素
     unset($array_name, $a);
+  	// 定义多维数组
+    $douArray = array(
+        1 => array("Tom", 2, 3),
+        2 => array("Jerry", 4, 5, 6)		// 当列数不同时，不进行任何改动，也就是 第一行有3个元素，第二行有4个元素
+    );
+    print_r($douArray);
 ```
+```php
+<?php
+  $arr = [1, 2, 3];
+	foreach($arr ad $key=>$value) {
+    echo "key = ".$key."<br>";
+  	echo "value = ".$value."<br>";
+}
+```
+
 <a name="l5VYS"></a>
 ### 1.7 函数
 :::info
