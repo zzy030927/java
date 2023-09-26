@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格样式化</title>
+    <style>
+      table {
+        /*表格布局样式*/
+        table-layout: fixed;
+        width: 100%;
+        /*属性设置表格的边框是否被合并为一个单一的边框，还是像在标准的 HTML 中那样分开显示。*/
+        /*也就是说是否合并单元格*/
+        border-collapse: collapse;
+        border: 3px solid #0066ff;
+        background-color: #ff00cc;
+        font-size: 30px;
+      }
+      table th:nth-child(1) {   /*设置每一列的宽度*/
+        width: 30%;
+      }
+      table th:nth-child(2) {
+        width: 20%;
+      }
+      table th:nth-child(3) {
+        width: 15%;
+      }
+      table th:nth-child(4) {
+        width: 35%;
+      }
+      th {
+        padding: 20px;
+      }
+      td {
+        padding: 20px;
+        text-align: center;
+      }
+      tbody tr:nth-child(odd) {   /*奇数列*/
+        background-color: #ffffff;
+      }
+      tr:nth-child(even) {        /*偶数列*/
+        background-color: #f0f0f0;
+      }
+      thead, tfoot {
+        background-color: #bfc2c3;
+      }
+      .div1 {
+        width: 80%;
+        margin: auto;
+      }
+    </style>
+</head>
+<body>
+  <div class="div1">
+    <table>
+      <thead>
+        <tr>
+          <th>班级</th>
+          <th>男生</th>
+          <th>女生</th>
+          <th>合计</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>2107</td>
+        <td>20</td>
+        <td>10</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>2108</td>
+        <td>10</td>
+        <td>20</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>2109</td>
+        <td>25</td>
+        <td>5</td>
+        <td>30</td>
+      </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>合计</th>
+          <th>45</th>
+          <th>45</th>
+          <th>90</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</body>
+</html>

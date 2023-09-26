@@ -1020,7 +1020,7 @@ div {
 
 - 块级元素：一个元素独占一行
 - 行内元素：与其他行内元素一起占满一行后换行，行内元素不能设置宽和高
-- 行内块元素：即具有块级元素的属性也具有行内元素的属性
+- 行内块元素：即具有块级元素的属性也具有行内元素的属性，即是行内元素，又能设置宽高。
 :::
 ```html
 <!DOCTYPE html>
@@ -1033,6 +1033,7 @@ div {
         background-color: yellow;
         border: 2px solid blue;
         display: inline;    /* 将元素设置为行内元素 */
+                            /* display: inline-block 将元素设置为 行内块元素 */
         /* display: none 效果：隐藏p1类的内容和效果 */
       }
       .p2 {
@@ -1132,6 +1133,131 @@ div {
     <a href="http://">计算机</a>
     <a href="http://">土木</a>
     <a href="http://">经管</a>
+</body>
+</html>
+```
+<a name="CAo7m"></a>
+### 盒子样式
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子样式化</title>
+    <style>
+        .div1 {
+            width: 400px;
+            height: 300px;
+            padding: 20pc;
+            background-color: yellow;
+            background-image: url("../../picture/preview.jpg");
+            background-repeat: repeat-y;       /*在原有图像大小的情况下是否在x轴或y轴上延伸满整个x轴或y轴*/
+            background-position: center;
+            border: blue solid;
+            border-radius: 2000px 200px 2000px 2000px;  /*边框四周角的旋转角度*/
+        }
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+</body>
+</html>
+```
+<a name="mh2kX"></a>
+### 表格样式
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格样式化</title>
+    <style>
+      table {
+        /*表格布局样式*/
+        table-layout: fixed;
+        width: 100%;
+        /*属性设置表格的边框是否被合并为一个单一的边框，还是像在标准的 HTML 中那样分开显示。*/
+        /*也就是说是否合并单元格*/
+        border-collapse: collapse;
+        border: 3px solid #0066ff;
+        background-color: #ff00cc;
+        font-size: 30px;
+      }
+      table th:nth-child(1) {   /*设置每一列的宽度*/
+        width: 30%;
+      }
+      table th:nth-child(2) {
+        width: 20%;
+      }
+      table th:nth-child(3) {
+        width: 15%;
+      }
+      table th:nth-child(4) {
+        width: 35%;
+      }
+      th {
+        padding: 20px;
+      }
+      td {
+        padding: 20px;
+        text-align: center;
+      }
+      tbody tr:nth-child(odd) {   /*奇数列*/
+        background-color: #ffffff;
+      }
+      tr:nth-child(even) {        /*偶数列*/
+        background-color: #f0f0f0;
+      }
+      thead, tfoot {
+        background-color: #bfc2c3;
+      }
+      .div1 {
+        width: 80%;
+        margin: auto;
+      }
+    </style>
+</head>
+<body>
+  <div class="div1">
+    <table>
+      <thead>
+        <tr>
+          <th>班级</th>
+          <th>男生</th>
+          <th>女生</th>
+          <th>合计</th>
+        </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>2107</td>
+        <td>20</td>
+        <td>10</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>2108</td>
+        <td>10</td>
+        <td>20</td>
+        <td>30</td>
+      </tr>
+      <tr>
+        <td>2109</td>
+        <td>25</td>
+        <td>5</td>
+        <td>30</td>
+      </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>合计</th>
+          <th>45</th>
+          <th>45</th>
+          <th>90</th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
 </body>
 </html>
 ```
