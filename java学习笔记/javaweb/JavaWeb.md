@@ -564,6 +564,27 @@ p {
 :::info
 DOM是一种树形结构，html会根据DOM模型，将HTML和XML解析成一系列节点，如果有CSS对应的节点，那么就增加它的叶子节点。
 :::
+<a name="azLdq"></a>
+### 盒子模型
+<a name="cOerL"></a>
+#### 盒子模型概念
+:::info
+块状元素可以想象成一个正方形的区块， 这个区块在页面展现时，势必存在一些和其他区块之间的间隔问题， W3C 组织定义的把网页的对象放在一个盒子（box）中， 也就是常说的盒子模型（Box Model）。
+
+1. content 内容
+2. padding 内边距 , 边框到层的内容之间的空白
+3. border 边框
+4. margin 外边距 ：边框以外留的空白
+:::
+![](https://cdn.nlark.com/yuque/0/2023/png/35506053/1695692097561-2a2c8c60-74dd-4b3a-bc2f-93cbe38f3a96.png#averageHue=%23c9c9be&clientId=u3b39464c-6b43-4&from=paste&id=u3af38ae8&originHeight=283&originWidth=441&originalType=url&ratio=1.25&rotation=0&showTitle=false&status=done&style=none&taskId=uaea3beb6-239d-40c3-8675-d98515284ef&title=)
+<a name="atV5A"></a>
+#### margin作用及如何定义
+:::info
+
+- margin 是边框以外留的空白 ，用于定义块级元素之间的距离
+- margin 是透明不可见
+- margin 的定义包含4个方向 。<br />![](https://cdn.nlark.com/yuque/0/2023/png/35506053/1695692194339-711ca256-2e08-4859-aecd-0745e9e46bf5.png#averageHue=%23fbfbfa&clientId=u3b39464c-6b43-4&from=paste&id=u53e34505&originHeight=200&originWidth=200&originalType=url&ratio=1.25&rotation=0&showTitle=false&status=done&style=none&taskId=u360d1826-a8bc-4bff-ab46-7bbe0d4e9e7&title=)
+:::
 <a name="NnQkx"></a>
 ### 选择器
 <a name="qPoqJ"></a>

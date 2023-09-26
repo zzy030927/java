@@ -1,7 +1,7 @@
 <a name="O1Zbr"></a>
 ##  第一章 php基础知识
 <a name="XJszW"></a>
-### 1.1 创建php代码段
+### 创建php代码段
 :::info
 php定界符：起始标记<?php<br />php定界符的其他形式：
 
@@ -16,7 +16,7 @@ php定界符：起始标记<?php<br />php定界符的其他形式：
    - 变量名均已$开头，并且所有变量都对大小写敏感
 :::
 <a name="z3unW"></a>
-### 1.2 php推荐代码格式
+### php推荐代码格式
 :::info
 变量定义，语句控制等用php语句，纯文本输出用html输出
 :::
@@ -36,7 +36,7 @@ if ($i) {
 ?>
 ```
 <a name="AM3TR"></a>
-### 1.3 进制表示
+### 进制表示
 ```php
 <?php
   $dec = 123;
@@ -51,7 +51,7 @@ if ($i) {
   echo $n1, '<br>', $n2, '<br>', $n3;
 ```
 <a name="eysHj"></a>
-### 1.4 字符串
+### 字符串
 ```php
 <?php
 	$name = "liBai";
@@ -89,7 +89,7 @@ abd;
     echo $str;
 ```
 <a name="PcyVu"></a>
-### 1.5 变量
+### 变量
 ```php
 <?php
     if(!defined("USER")) {			// 如果没有定义常量USER
@@ -160,7 +160,7 @@ abd;
 ?>
 ```
 <a name="JRDsB"></a>
-### 1.6 数组
+### 数组
 ```php
 <?php
 	$flag = false;										// 0为false，其他数值全为true
@@ -240,12 +240,12 @@ abd;
   	echo	array_search(100, $arr);					// 根据值查找键
 ```
 <a name="l5VYS"></a>
-### 1.7 函数
+### 函数
 :::info
 值传参：只传入具体值<br />引用传参：加一个&传入变量的地址
 :::
 <a name="im3H7"></a>
-#### 1.7.1 函数参数
+#### 函数参数
 ```php
 <?php
   function modify($a) {
@@ -304,7 +304,7 @@ echo add(...$a);
 ?>
 ```
 <a name="qApAa"></a>
-#### 1.7.2 函数返回值
+#### 函数返回值
 :::info
 没有设置返回值，那么返回null<br />只能返回一个值，可以返回一个引用
 :::
@@ -330,7 +330,7 @@ echo add(...$a);
     echo $one.'<br>'.$two.'<br>'.$zero;
 ```
 <a name="fpl8W"></a>
-#### 1.7.3 可变函数
+#### 可变函数
 :::info
 PHP 支持可变函数的概念。这意味着如果一个变量名后有圆括号，PHP 将寻找与变量的值同名的函数，并且尝试执行它。可变函数可以用来实现包括回调函数，函数表在内的一些用途。<br />可变函数不能用于例如 [echo](https://www.php.net/manual/zh/function.echo.php)，[print](https://www.php.net/manual/zh/function.print.php)，[unset()](https://www.php.net/manual/zh/function.unset.php)，[isset()](https://www.php.net/manual/zh/function.isset.php)，[empty()](https://www.php.net/manual/zh/function.empty.php)，[include](https://www.php.net/manual/zh/function.include.php)，[require](https://www.php.net/manual/zh/function.require.php) 以及类似的语言结构。需要使用自己的包装函数来将这些结构用作可变函数。
 :::
@@ -387,7 +387,7 @@ PHP 支持可变函数的概念。这意味着如果一个变量名后有圆括�
     $func(); // 打印 "bar"
 ```
 <a name="Ic4Vs"></a>
-#### 1.7.4 自定义函数
+#### 自定义函数
 ```php
 <?php
 
@@ -433,7 +433,7 @@ PHP 支持可变函数的概念。这意味着如果一个变量名后有圆括�
   bar();
 ```
 <a name="gWtmj"></a>
-### 1.8 类型转换
+### 类型转换
 ```php
 <?php
   $x = "1.1";
@@ -453,7 +453,7 @@ PHP 支持可变函数的概念。这意味着如果一个变量名后有圆括�
   	echo $b;						// // 0为false，其他数值全为true
 ```
 <a name="DEc88"></a>
-### 1.9 比较运算符
+### 比较运算符
 ```php
 <?php
   echo 1 == '1';			// true
@@ -465,16 +465,16 @@ PHP 支持可变函数的概念。这意味着如果一个变量名后有圆括�
     	// 用 `` 表示
 ```
 <a name="rMmzK"></a>
-### 2.0 类
+### 类
 <a name="VtMkJ"></a>
-#### 2.1 只读类
+#### 只读类
 ```php
 <?php
   // 将类标记为readonly只读类只会向每个声明的属性添加 readonly修饰符 并禁止创建 动态属性。
   // 当子类也是readonly类时，才可以继承readonly类
 ```
 <a name="VabF8"></a>
-### 2.1 goto
+### goto
 :::info
 跳转到指定一行
 :::
@@ -487,7 +487,7 @@ PHP 支持可变函数的概念。这意味着如果一个变量名后有圆括�
     echo 4;
 ```
 <a name="h5D8V"></a>
-### 2.2 include
+### include
 :::info
 include用于包含并运行指定文件<br />include_once与include区别为include_once只能被引用一次
 :::
@@ -504,3 +504,5 @@ include用于包含并运行指定文件<br />include_once与include区别为inc
   echo $email;
 	echo include "test.php";		// 会打印test.php中返回的内容
 ```
+<a name="GBabh"></a>
+### <br />
