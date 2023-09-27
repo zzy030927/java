@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>z轴</title>
+  <style>
+    body {
+      width: 60%;
+      margin: 0 auto; /* 0上下 auto左右自动 */
+    }
+    p {
+      border: 1px solid black;
+      background-color: aquamarine;
+    }
+    .position {
+      position: absolute; /*绝对定位：独立于其他元素，单独布局*/
+      top: 25px;          /*上侧对应于父元素的距离*/
+      left: 40px;         /*左侧相对于父元素的距离*/
+      background-color: yellow;
+    }
+    .position2 {
+      position: absolute;
+      top: 25px;
+      left: 40px;
+      background-color: cyan;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>
+      虚拟线程是一种轻量化的线程封装，由jvm直接调度和管理。反之普通的线程其实是调用的操作系统的能力，对应的是操作系统级的线程。
+    </p>
+    <p>
+      相对虚拟线程来说操作系统级的线程持有成本很高，而且受操作系统调度和管理的。实际在普通多线程情况下，如果出现IO阻塞，
+    </p>
+  </div>
+  <div>
+    <p class="position">这个线程就必须得跟着阻塞，这个线程对应的操作系统就被阻塞，而他却持有大量的内存。</p>
+    <p class="position2">另外，要处理大量的IO就得新建更多线程，而大量的线程会在操作系统切换时因上下文切换导致大量的CPU被浪费。</p>
+  </div>
+</body>
+</html>

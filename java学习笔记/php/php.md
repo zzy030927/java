@@ -467,11 +467,98 @@ PHP 支持可变函数的概念。这意味着如果一个变量名后有圆括�
 <a name="rMmzK"></a>
 ### 类
 <a name="VtMkJ"></a>
-#### 只读类
+#### readonly
 ```php
 <?php
   // 将类标记为readonly只读类只会向每个声明的属性添加 readonly修饰符 并禁止创建 动态属性。
   // 当子类也是readonly类时，才可以继承readonly类
+```
+```php
+<?php
+    class Simple {
+        // 属性声明
+        public $var = "hello world";
+        public $num = 2;
+        public static $st = 3;
+        public readonly string $read;   // 只读属性不能直接初始化，需要在构造函数或者方法中进行赋值，并且只能赋值一次
+        public function __construct()   // 在构造方法中进行赋值
+        {
+            $this->read = "1";
+            echo $this->read;
+            // $this->read = "2";  报错
+        }
+	}
+	$sim = new Simple();
+```
+<a name="Bh20F"></a>
+#### 类函数访问静态变量、非静态变量
+```php
+<?php
+  class Simple {
+  // 属性声明
+  public $var = "hello world";
+  public $num = 2;
+  public static $st = 3;
+  public function func(?string $str) {    // ?string 为要么返回的类型为string，要么为null,?的作用为允许返回null
+    echo self::$st."<br>";  			 // self::  访问静态变量
+    echo $this->var."<br>";        // $this-> 访问非静态变量
+    echo $str;              			 // 直接访问形参
+  }
+}
+$sim = new Simple();
+$sim->func("zz");
+```
+<a name="eaz0q"></a>
+#### 常量
+```php
+<?php
+  class MyClass
+  {
+      public const CONSTANT = 'constant value';		// private 修饰只能在类内访问
+  
+      function showConstant() {
+          echo  self::CONSTANT . "\n";		// 访问静态变量用 self:: 访问
+      }
+  }
+  
+  echo MyClass::CONSTANT . "\n";				  // 通过类名访问 
+  
+  $classname = "MyClass";
+  echo $classname::CONSTANT . "\n";
+  
+  $class = new MyClass();
+  $class->showConstant();
+  
+  echo $class::CONSTANT."\n";
+```
+<a name="nQuWY"></a>
+#### 类的自动加载
+:::info
+spl_autoload_refister()函数，参数传递一个函数，自动加载需要的后缀文件
+:::
+```php
+<?php
+  spl_autoload_register(function ($class_name) {
+      require_once $class_name . '.php';
+  });
+  // 尝试分别从 MyClass1.php 和 MyClass2.php 文件中加载 MyClass1 和 MyClass2 类。
+  $obj  = new MyClass1();
+  $obj2 = new MyClass2();
+```
+<a name="HwVAr"></a>
+#### 构造函数和析构函数
+```php
+<?php
+  class MyDestructableClass {
+      function __construct() {		// 构造函数，和C++相同，先运行父类的构造函数
+          print "In constructor\n";
+      }
+  
+      function __destruct() {			// 析构函数，和C++相同，先运行自己的析构函数
+          print "Destroying " . __CLASS__ . "\n";
+      }
+  }
+  $obj = new MyDestructableClass();
 ```
 <a name="VabF8"></a>
 ### goto

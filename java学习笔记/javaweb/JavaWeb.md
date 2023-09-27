@@ -1282,3 +1282,273 @@ div {
 </body>
 </html>
 ```
+<a name="VWXd9"></a>
+### 页面布局		
+<a name="t7BEV"></a>
+#### 流动模型
+:::info
+流动模型：默认的网页布局模式。网页在默认状态下的HTML网页元素都是根据流动模型分布网页内容的，典型的特征：
+
+1. 块状元素都会在所处的包括元素内自上而下按顺序垂直延伸分布
+2. 在流动模型下，行内元素都会在所处的包括元素内从左到右水平分布显示。行内元素不像块状元素一样独占一行。
+:::
+<a name="RpLcC"></a>
+#### 浮动模型
+:::info
+float属性：是为了能让web开发人员实现简单的布局，包括在一列文本中浮动的图像，文字环绕在左边或右边等。<br />浮动用来实现整个网站页面的布局，是信息列得以横向排列。（流式布局：顺序纵向排列）
+:::
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>页面布局</title>
+    <style>
+      div {
+        width: 500px;
+        height: 500px;
+        background-color: yellow;
+        float: right;    /*使用float属性，使得div标签向右浮动*/
+      }
+      .div1 {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        background-color: #ff00cc;
+      }
+      .div2 {
+        width: 200px;
+        height: 200px;
+        background-color: #0066ff;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div class="div1"></div>
+      <div class="div2"></div>
+    </div>
+  </body>
+</html>
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>两栏布局</title>
+    <style>
+        .div1 {
+            float: left;
+            width: 48%;
+            border: 1px solid blue;
+        }
+        .div2 {
+            float: right;
+            width: 48%;
+            border: 1px solid blue;
+            height: 131px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <p>
+            虚拟线程是一种轻量化的线程封装，由jvm直接调度和管理。反之普通的线程其实是调用的操作系统的能力，对应的是操作系统级的线程。
+        </p>
+        <p>
+            相对虚拟线程来说操作系统级的线程持有成本很高，而且受操作系统调度和管理的。实际在普通多线程情况下，如果出现IO阻塞，
+        </p>
+    </div>
+    <div class="div2">
+        <p>这个线程就必须得跟着阻塞，这个线程对应的操作系统就被阻塞，而他却持有大量的内存。</p>
+        <p>另外，要处理大量的IO就得新建更多线程，而大量的线程会在操作系统切换时因上下文切换导致大量的CPU被浪费。</p>
+    </div>
+
+</body>
+</html>
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>三栏布局</title>
+  <style>
+    .div1 {
+      float: left;
+      width: 30%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .div2 {
+      float: left;
+      width: 40%;
+    }
+    .div3 {
+      float: right;
+      padding: 10px;
+      width: 30%;
+      box-sizing: border-box; 
+      /* 当一个盒子的总宽度确定之后，要想给盒子添加边框或内边距，往往需要更改 width属性值，才能保证盒子总宽度不变，操作起来烦琐且容易出错，运用CSS3的box-sizing属性可以轻松解决这个问题。
+      box-sizing属性用于定义盒子的宽度值和高度值是否包含元素的内边距和边框 */
+    }
+  </style>
+</head>
+<body>
+  <div class="div1">
+    <p>
+      虚拟线程是一种轻量化的线程封装，由jvm直接调度和管理。反之普通的线程其实是调用的操作系统的能力，对应的是操作系统级的线程。
+    </p>
+    <p>
+      相对虚拟线程来说操作系统级的线程持有成本很高，而且受操作系统调度和管理的。实际在普通多线程情况下，如果出现IO阻塞，
+    </p>
+  </div>
+  <div class="div2">
+    <p>这个线程就必须得跟着阻塞，这个线程对应的操作系统就被阻塞，而他却持有大量的内存。</p>
+  </div>
+  <div class="div3">
+    <p>另外，要处理大量的IO就得新建更多线程，而大量的线程会在操作系统切换时因上下文切换导致大量的CPU被浪费。</p>
+  </div>
+
+</body>
+</html>
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>清除浮动</title>
+  <style>
+    .div1 {
+      float: left;
+      width: 30%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+    .div2 {
+      float: left;
+      width: 40%;
+    }
+    .div3 {
+      float: right;
+      padding: 10px;
+      width: 30%;
+      box-sizing: border-box;
+    }
+    .clearfix {
+      clear: both;  /*清除左浮动和右浮动*/
+    }
+  </style>
+</head>
+<body>
+  <div class="div1">
+    <p>
+      虚拟线程是一种轻量化的线程封装，由jvm直接调度和管理。反之普通的线程其实是调用的操作系统的能力，对应的是操作系统级的线程。
+    </p>
+    <p>
+      相对虚拟线程来说操作系统级的线程持有成本很高，而且受操作系统调度和管理的。实际在普通多线程情况下，如果出现IO阻塞，
+    </p>
+  </div>
+  <div class="div2">
+    <p>这个线程就必须得跟着阻塞，这个线程对应的操作系统就被阻塞，而他却持有大量的内存。</p>
+  </div>
+  <div class="div3">
+    <p>另外，要处理大量的IO就得新建更多线程，而大量的线程会在操作系统切换时因上下文切换导致大量的CPU被浪费。</p>
+  </div>
+  <div class="clearfix">@版权所有：123456</div>
+</body>
+</html>
+```
+<a name="BQrR4"></a>
+#### 层模型
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>相对定位</title>
+  <style>
+    body {
+      width: 60%;
+      margin: 0 auto; /* 0上下 auto左右自动 */
+    }
+    p {
+      border: 1px solid black;
+      background-color: aquamarine;
+    }
+    .position {
+      /*浏览器默认为static*/
+      position: relative; /*相对前一个元素的位置*/
+      top: 25px;			/*上侧相对前一个元素的距离*/
+      left: 40px;			/*左侧相对前一个元素的距离*/
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+<div>
+  <p>
+    虚拟线程是一种轻量化的线程封装，由jvm直接调度和管理。反之普通的线程其实是调用的操作系统的能力，对应的是操作系统级的线程。
+  </p>
+  <p>
+    相对虚拟线程来说操作系统级的线程持有成本很高，而且受操作系统调度和管理的。实际在普通多线程情况下，如果出现IO阻塞，
+  </p>
+</div>
+<div>
+  <p class="position">这个线程就必须得跟着阻塞，这个线程对应的操作系统就被阻塞，而他却持有大量的内存。</p>
+</div>
+<div>
+  <p>另外，要处理大量的IO就得新建更多线程，而大量的线程会在操作系统切换时因上下文切换导致大量的CPU被浪费。</p>
+</div>
+</body>
+</html>
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位</title>
+  <style>
+    body {
+      width: 60%;
+      margin: 0 auto; /* 0上下 auto左右自动 */
+    }
+    .div1 {
+      width: 100px;
+      height: 100px;
+      background-color: #bfc2c3;
+    }
+    p {
+      border: 1px solid black;
+      background-color: aquamarine;
+    }
+    .position {
+      position: absolute; /*绝对定位：独立于其他元素，单独布局*/
+      top: 25px;          /*上侧对应于父元素的距离*/
+      left: 40px;         /*左侧相对于父元素的距离*/
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <p>
+      虚拟线程是一种轻量化的线程封装，由jvm直接调度和管理。反之普通的线程其实是调用的操作系统的能力，对应的是操作系统级的线程。
+    </p>
+    <p>
+      相对虚拟线程来说操作系统级的线程持有成本很高，而且受操作系统调度和管理的。实际在普通多线程情况下，如果出现IO阻塞，
+    </p>
+  </div>
+  <div class="div1">
+    <!--此处<p>标签的父元素为<body>,不是<div>-->
+    <p class="position">这个线程就必须得跟着阻塞，这个线程对应的操作系统就被阻塞，而他却持有大量的内存。</p>
+  </div>
+  <div>
+    <p>另外，要处理大量的IO就得新建更多线程，而大量的线程会在操作系统切换时因上下文切换导致大量的CPU被浪费。</p>
+  </div>
+</body>
+</html>
+```
