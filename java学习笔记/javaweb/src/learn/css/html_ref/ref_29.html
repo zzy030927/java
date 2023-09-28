@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三帧布局</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      .container {
+        text-align: center;
+        width: 1024px;
+        height: 100%;
+        background-color: #ffea00;
+        margin: 0 auto;
+      }
+      .left {
+        background-color: #00ffd9;
+        width: 20%;
+        height: 100%;
+        float: left;
+      }
+      .header {
+        background-color: #bfc2c3;
+        width: calc(1024px - 20%);
+        height: 10%;
+        float: right;
+      }
+      .context {
+        background-color: green;
+        width: 80%;
+        height: 80%;
+        float: left;
+      }
+      .footer {
+        background-color: #ff0073;
+        width: 80%;
+        height: 10%;
+        float: left;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="left">导航栏</div>
+      <div class="header">头部</div>
+      <div class="context">内容</div>
+      <div class="footer">脚标</div>
+    </div>
+</body>
+</html>

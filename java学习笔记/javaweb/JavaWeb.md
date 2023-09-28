@@ -1530,6 +1530,7 @@ float属性：是为了能让web开发人员实现简单的布局，包括在一
       top: 25px;          /*上侧对应于父元素的距离*/
       left: 40px;         /*左侧相对于父元素的距离*/
       background-color: yellow;
+      z-index: 3;			/* z轴距离 */
     }
   </style>
 </head>
@@ -1549,6 +1550,197 @@ float属性：是为了能让web开发人员实现简单的布局，包括在一
   <div>
     <p>另外，要处理大量的IO就得新建更多线程，而大量的线程会在操作系统切换时因上下文切换导致大量的CPU被浪费。</p>
   </div>
+</body>
+</html>
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>固定定位</title>
+    <style>
+      body {
+        width: 60%;
+        margin: 0 auto; /*距离上侧、下侧0px 左右自动*/
+      }
+      .fixed {
+        position: fixed;  /*固定不动, 不随着内容动*/
+        top: 0;
+        margin: 0;
+        width: 600px;
+        height: 60px;
+        border: 1px solid red;
+        background-color: #ffc400;
+      }
+    </style>
+</head>
+<body>
+    <h1 class="fixed">固定定位</h1>
+    <p>虚拟线程是一种轻量化的线程封装，由jvm直接调度和管理。反之普通的线程其实是调用的操作系统的能力，对应的是操作系统级的线程。</p>
+    <p>相对虚拟线程来说操作系统级的线程持有成本很高，而且受操作系统调度和管理的。实际在普通多线程情况下，如果出现IO阻塞，</p>
+    <p>这个线程就必须得跟着阻塞，这个线程对应的操作系统就被阻塞，而他却持有大量的内存。</p>
+    <p>另外，要处理大量的IO就得新建更多线程，而大量的线程会在操作系统切换时因上下文切换导致大量的CPU被浪费。</p>
+    <p>虚拟线程是一种轻量化的线程封装，由jvm直接调度和管理。反之普通的线程其实是调用的操作系统的能力，对应的是操作系统级的线程。</p>
+    <p>相对虚拟线程来说操作系统级的线程持有成本很高，而且受操作系统调度和管理的。实际在普通多线程情况下，如果出现IO阻塞，</p>
+    <p>这个线程就必须得跟着阻塞，这个线程对应的操作系统就被阻塞，而他却持有大量的内存。</p>
+    <p>另外，要处理大量的IO就得新建更多线程，而大量的线程会在操作系统切换时因上下文切换导致大量的CPU被浪费。</p>
+    <p>虚拟线程是一种轻量化的线程封装，由jvm直接调度和管理。反之普通的线程其实是调用的操作系统的能力，对应的是操作系统级的线程。</p>
+    <p>相对虚拟线程来说操作系统级的线程持有成本很高，而且受操作系统调度和管理的。实际在普通多线程情况下，如果出现IO阻塞，</p>
+    <p>这个线程就必须得跟着阻塞，这个线程对应的操作系统就被阻塞，而他却持有大量的内存。</p>
+    <p>另外，要处理大量的IO就得新建更多线程，而大量的线程会在操作系统切换时因上下文切换导致大量的CPU被浪费。</p>
+    <p>虚拟线程是一种轻量化的线程封装，由jvm直接调度和管理。反之普通的线程其实是调用的操作系统的能力，对应的是操作系统级的线程。</p>
+    <p>相对虚拟线程来说操作系统级的线程持有成本很高，而且受操作系统调度和管理的。实际在普通多线程情况下，如果出现IO阻塞，</p>
+    <p>这个线程就必须得跟着阻塞，这个线程对应的操作系统就被阻塞，而他却持有大量的内存。</p>
+    <p>另外，要处理大量的IO就得新建更多线程，而大量的线程会在操作系统切换时因上下文切换导致大量的CPU被浪费。</p>
+    <p>虚拟线程是一种轻量化的线程封装，由jvm直接调度和管理。反之普通的线程其实是调用的操作系统的能力，对应的是操作系统级的线程。</p>
+    <p>相对虚拟线程来说操作系统级的线程持有成本很高，而且受操作系统调度和管理的。实际在普通多线程情况下，如果出现IO阻塞，</p>
+    <p>这个线程就必须得跟着阻塞，这个线程对应的操作系统就被阻塞，而他却持有大量的内存。</p>
+    <p>另外，要处理大量的IO就得新建更多线程，而大量的线程会在操作系统切换时因上下文切换导致大量的CPU被浪费。</p>
+    <p>虚拟线程是一种轻量化的线程封装，由jvm直接调度和管理。反之普通的线程其实是调用的操作系统的能力，对应的是操作系统级的线程。</p>
+    <p>相对虚拟线程来说操作系统级的线程持有成本很高，而且受操作系统调度和管理的。实际在普通多线程情况下，如果出现IO阻塞，</p>
+    <p>这个线程就必须得跟着阻塞，这个线程对应的操作系统就被阻塞，而他却持有大量的内存。</p>
+    <p>另外，要处理大量的IO就得新建更多线程，而大量的线程会在操作系统切换时因上下文切换导致大量的CPU被浪费。</p>
+</body>
+</html>
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>粘性定位</title>
+    <style>
+        dt {
+            position: sticky;   /*粘性定位*/
+            top: 5px;  /*当下一个dt距离当前这个dt 5个像素时，当前这个dt消失*/
+            background-color: cyan;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>A</dt>
+        <dd>a1</dd>
+        <dd>a2</dd>
+        <dd>a3</dd>
+        <dd>a4</dd>
+        <dd>a5</dd>
+        <dd>a6</dd>
+        <dd>a7</dd>
+        <dd>a8</dd>
+        <dd>a9</dd>
+        <dd>a10</dd>
+        <dd>a11</dd>
+        <dd>a12</dd>
+        <dd>a13</dd>
+        <dd>a14</dd>
+        <dd>a15</dd>
+        <dd>a16</dd>
+        <dd>a17</dd>
+        <dd>a18</dd>
+        <dd>a19</dd>
+    </dl>
+    <dl>
+        <dt>B</dt>
+        <dd>b1</dd>
+        <dd>b2</dd>
+        <dd>b3</dd>
+        <dd>b4</dd>
+        <dd>b5</dd>
+        <dd>b6</dd>
+        <dd>b7</dd>
+        <dd>b8</dd>
+        <dd>b9</dd>
+        <dd>b10</dd>
+        <dd>b11</dd>
+        <dd>b12</dd>
+        <dd>b13</dd>
+        <dd>b14</dd>
+        <dd>b15</dd>
+        <dd>b16</dd>
+        <dd>b17</dd>
+        <dd>b18</dd>
+        <dd>b19</dd>
+    </dl>
+    <dl>
+        <dt>C</dt>
+        <dd>c1</dd>
+        <dd>c2</dd>
+        <dd>c3</dd>
+        <dd>c4</dd>
+        <dd>c5</dd>
+        <dd>c6</dd>
+        <dd>c7</dd>
+        <dd>c8</dd>
+        <dd>c9</dd>
+        <dd>c10</dd>
+        <dd>c11</dd>
+        <dd>c12</dd>
+        <dd>c13</dd>
+        <dd>c14</dd>
+        <dd>c15</dd>
+        <dd>c16</dd>
+        <dd>c17</dd>
+        <dd>c18</dd>
+        <dd>c19</dd>
+    </dl>
+</body>
+</html>
+```
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三帧布局</title>
+    <style>
+      html, body {
+        margin: 0;		/*所有内容 外边距，内边距 清零*/
+        padding: 0;
+        height: 100%;
+      }
+      .container {
+        text-align: center;
+        width: 1024px;
+        height: 100%;
+        background-color: #ffea00;
+        margin: 0 auto;
+      }
+      .left {
+        background-color: #00ffd9;
+        width: 20%;
+        height: 100%;
+        float: left;
+      }
+      .header {
+        background-color: #bfc2c3;
+        width: calc(1024px - 20%);
+        height: 10%;
+        float: right;
+      }
+      .context {
+        background-color: green;
+        width: 80%;
+        height: 80%;
+        float: left;
+      }
+      .footer {
+        background-color: #ff0073;
+        width: 80%;
+        height: 10%;
+        float: left;
+      }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="left">导航栏</div>
+      <div class="header">头部</div>
+      <div class="context">内容</div>
+      <div class="footer">脚标</div>
+    </div>
 </body>
 </html>
 ```
