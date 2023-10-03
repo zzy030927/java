@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>spring-context-annotation</artifactId>
+    <artifactId>spring-context-annotation-01</artifactId>
 
     <dependencies>
     </dependencies>

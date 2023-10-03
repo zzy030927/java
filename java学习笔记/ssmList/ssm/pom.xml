@@ -10,6 +10,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring-context-annotation</module>
+        <module>spring-aop-annotation-02</module>
+        <module>spring-aop-annotationAspectj-03</module>
+        <module>test</module>
     </modules>
 
     <dependencies>
@@ -28,6 +31,11 @@
             <artifactId>spring-test</artifactId>
             <version>6.0.11</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>6.0.12</version>
         </dependency>
     </dependencies>
 

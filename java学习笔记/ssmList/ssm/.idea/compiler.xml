@@ -6,7 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="spring-context-annotation" />
+        <module name="spring-aop-annotation-02" />
+        <module name="spring-aop-annotationAspectj-03" />
+        <module name="spring-context-annotation-01" />
       </profile>
     </annotationProcessing>
   </component>
