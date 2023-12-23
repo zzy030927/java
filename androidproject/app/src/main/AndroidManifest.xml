@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        >
+
+    <application
+            android:allowBackup="true"
+            android:dataExtractionRules="@xml/data_extraction_rules"
+            android:fullBackupContent="@xml/backup_rules"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.Androidproject"
+            >
+        <activity
+                android:name=".controller.BoughtGoodInfo"
+                android:exported="true"
+                >
+        </activity>
+        <activity
+                android:name=".controller.BuyCarActivity"
+                android:exported="true"
+                >
+        </activity>
+        <activity
+                android:name=".controller.HomeActivity"
+                android:exported="true"
+                >
+        </activity>
+        <activity
+                android:name=".controller.ManagerActivity"
+                android:exported="true"
+                >
+        </activity>
+        <activity
+                android:name=".controller.GoodInfoActivity"
+                android:exported="true"
+                >
+        </activity>
+        <activity
+                android:name=".controller.ResetPwdActivity"
+                android:exported="true"
+                >
+        </activity>
+        <activity
+                android:name=".controller.LoginActivity"
+                android:exported="true"
+                >
+        </activity>
+    </application>
+
+</manifest>
