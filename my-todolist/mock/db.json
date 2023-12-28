@@ -1,0 +1,80 @@
+{
+  "cars": [
+    {
+      "id": 3,
+      "carName": "奔驰",
+      "carImage": "https://www.mercedes-benz.com.cn/content/dam/mb-cn/vehicles/sedan/maybach/803/480-4M.png",
+      "addCarDate": "2023-12-08T16:00:00.000Z",
+      "numbers": 0,
+      "carInfo": "梅赛德斯-奔驰（Mercedes-Benz）是世界闻名的豪华汽车品牌。2022财年营业额1500亿欧元。 [77]1886年1月，卡尔·本茨发明了世界上第一辆三轮汽车，获得专利（专利号：DRP 37435），被誉为“汽车的发明者”。与此同时，奔驰的另一位创始人戈特利布·戴姆勒发明了世界上第一辆四轮汽车，从此，世界发生了改变。1926年6月，戴姆勒公司与奔驰公司合并成立了戴姆勒-奔驰汽车公司，以梅赛德斯-奔驰命名的汽车，是高质量，高性能的汽车产品的代表。除了高档豪华汽车外，奔驰公司还是世界上最著名的大客车和重型载重汽车的生产厂家。梅赛德斯-奔驰为戴姆勒集团（Daimler AG）旗下公司。"
+    },
+    {
+      "id": 4,
+      "carName": "凯迪拉克",
+      "carImage": "https://ms.bdimg.com/pacific/0/pic/794898543_1340675969.jpg?x=0&y=0&h=340&w=510&vh=340.00&vw=510.00&oh=340.00&ow=510.00",
+      "addCarDate": "2023-12-07T16:00:00.000Z",
+      "numbers": "100",
+      "carInfo": "凯迪拉克（Cadillac），美国通用汽车旗下著名豪华汽车品牌，1902年（壬寅年）诞生于被誉为美国汽车之城的底特律，一百多年来，凯迪拉克汽车在行业车内创造了无数个第一，缔造了无数个豪华车的行业标准。可以说凯迪拉克的历史代表了美国豪华车的历史。\n在韦伯斯特大词典中，凯迪拉克被定义为“同类中最为出色、最具声望事物”的同义词；被一向以追求极致尊贵著称的伦敦皇家汽车俱乐部冠以“世界标准”的美誉。 凯迪拉克融汇了百年历史精华和一代代设计师的智慧才智，成为汽车工业的领导性品牌。"
+    },
+    {
+      "id": 5,
+      "carName": "宝马",
+      "carImage": "https://img1.baidu.com/it/u=1112336695,4021921820&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=313",
+      "addCarDate": "2023-12-22T16:00:00.000Z",
+      "numbers": "100",
+      "carInfo": "宝马（BMW），中文全称为巴伐利亚发动机制造厂股份有限公司，德国汽车品牌，宝马集团2022年营收1426亿欧元， [53]宝马的车系有i、X、Z、纯数字4个车型，1、2、3、4、5、6、7、8等几个系列，还有在各系基础上进行改进的M系（宝马官方的高性能改装部门），宝马公司创建于1916年，总部设在德国巴伐利亚自由州的慕尼黑，BMW的蓝白标志宝马总部所在地巴伐利亚自由州州旗的颜色，百年来，宝马汽车由最初的一家飞机引擎生产厂发展成为以高级轿车为主导，并生产享誉全球的飞机引擎、越野车和摩托车的企业集团，名列世界汽车公司前列，其全称为die Bayerischen Motorenwerke (Bavarian Motor Works)。"
+    },
+    {
+      "id": 6,
+      "carName": "奥迪",
+      "carImage": "https://ecmb.bdimg.com/tam-ogel/-840632800_-1422765275_360_212.png",
+      "addCarDate": "2023-12-05T16:00:00.000Z",
+      "numbers": "300",
+      "carInfo": "1111111111111111111111"
+    }
+  ],
+  "employee": [
+    {
+      "id": 1,
+      "loginId": "123123",
+      "empName": "李四",
+      "address": "123123123123",
+      "phone": "110",
+      "buyCarName": "宝马",
+      "icon": "https://img0.baidu.com/it/u=3232582821,3516640051&fm=253&app=138&size=w931&n=0&f=JPEG&fmt=auto?sec=1703782800&t=625657dd1cb850a5b546fcc0c56da41f"
+    },
+    {
+      "id": 2,
+      "loginId": "222",
+      "empName": "王五",
+      "address": "北京",
+      "phone": "222",
+      "buyCarName": "宝马",
+      "icon": "https://img1.baidu.com/it/u=4270144465,1604793144&fm=253&app=120&size=w931&n=0&f=JPEG&fmt=auto?sec=1703782800&t=a2a326ce2a05ff69ec4b03bb08f83e5f"
+    }
+  ],
+  "user": [
+    {
+      "id": 1,
+      "loginId": "admin",
+      "userName": "张三",
+      "currentPassword": "123",
+      "currentPassword2": "123",
+      "email": "zhangSan@qq.com",
+      "mobile": "11223344777",
+      "userType": "0",
+      "currentStatus": "0"
+    },
+    {
+      "id": 0,
+      "loginId": "user",
+      "userName": "李四",
+      "currentPassword": "111",
+      "currentPassword2": "111",
+      "email": "lisi@qq.com",
+      "mobile": "65544332211",
+      "userType": "1",
+      "currentStatus": "0"
+    }
+  ]
+}
